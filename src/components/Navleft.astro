@@ -1,9 +1,16 @@
 ---
+import Button from "./Button.astro";
 ---
 
 <article>
-  <img src="../../public/logo.png" alt="Logo" /><a href="index.astro"><button>Hjem</button></a><a href=""><button>Søg</button></a><button>Dit bibliotek</button>
-  <div class="div_2"><button>Opret playliste</button><button>Sange, du synes godt...</button></div>
+  <img src="../../logo.png" alt="Logo" />
+  <a href="/"><Button hasIcon={true} src="../public/icons/home.svg">Hjem</Button></a>
+  <a href="/search"><Button hasIcon={true} src="../public/icons/home.svg">Søg</Button></a>
+  <a href="/"><Button hasIcon={true} src="../public/icons/home.svg">Dit bibliotek</Button></a>
+  <div class="div_2">
+    <Button hasIcon={true} src="../public/icons/home.svg">Opret playliste</Button>
+    <Button hasIcon={true} src="../public/icons/home.svg">Sange, du synes godt...</Button>
+  </div>
 </article>
 
 <style>

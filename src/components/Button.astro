@@ -1,7 +1,12 @@
 ---
+const { src } = Astro.props;
+const { hasIcon } = Astro.props;
 ---
 
-<button>Tilmeld dig gratis</button>
+<button>
+  {hasIcon && <img src={src} alt="Icon" />}
+  <slot />
+</button>
 
 <style>
   button {
@@ -12,8 +17,8 @@
     border: none;
     background-color: rgb(241, 241, 241);
     color: rgb(22, 22, 22);
-    position: relative;
+    /* position: relative;
     left: 72%;
-    top: 18%;
+    top: 18%; */
   }
 </style>
