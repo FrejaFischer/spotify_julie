@@ -8,6 +8,7 @@ body {
 main {
   display: grid;
   grid-template-rows: 1fr 15;
+  margin-left: 26%;
 }
 
 .first_div {

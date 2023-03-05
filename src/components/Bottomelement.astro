@@ -1,9 +1,10 @@
 ---
-const {} = Astro.props;
+const { hasIcon } = Astro.props;
+const { variant } = Astro.props;
 import Button from "./Button.astro";
 ---
 
-<article><p>Dette er footer. Hvor er du?!</p><Button hasIcon={false} src="">Sign up free</Button></article>
+<article><p>Preview of Spotify Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p><Button hasIcon={false} variant="primary" id="footer_button">Sign up free</Button></article>
 
 <style>
   article {
@@ -11,9 +12,13 @@ import Button from "./Button.astro";
     width: 100%;
     height: 10%;
     background-image: linear-gradient(to right, #da41be, #cd39cc, #bb36dc, #a139ec, #7a3ffd);
+    display: flex;
+    justify-content: space-around;
   }
 
   p {
     display: inline;
+    align-self: center;
+    color: white;
   }
 </style>

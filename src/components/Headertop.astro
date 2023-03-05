@@ -1,4 +1,5 @@
 ---
+import Button from "./Button.astro";
 const { hasSearch } = Astro.props;
 ---
 
@@ -18,21 +19,26 @@ const { hasSearch } = Astro.props;
     }
   </div>
   <div class="div_2">
-    <button>Tilmeld dig</button>
-    <button>Log på</button>
+    <Button variant="secondary" hasIcon={false}>Sign up</Button>
+    <Button variant="primary" hasIcon={false}>Log in</Button>
   </div>
 </article>
 
 <style>
   article {
-    flex-direction: column;
     background-color: rgb(22, 22, 22);
-    width: 100%;
+    width: 84%;
     position: fixed;
+    left: 16%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 8%;
+    justify-content: space-between;
   }
 
   .left_arrow {
-    margin-right: 4%;
+    margin-right: 70px;
   }
 
   p {
@@ -41,44 +47,49 @@ const { hasSearch } = Astro.props;
     font-size: 3rem;
     margin: 0;
   }
-  button {
+  /* button {
     border-radius: 25px;
     padding: 1% 2.2% 1% 2.2%;
     font-weight: 600;
     font-size: 90%;
     border: none;
     margin: 1%;
-  }
-  div {
+  } */
+  /* div {
     display: inline;
-  }
+  } */
   .div_1 {
-    position: relative;
-    left: 3%;
+    display: inline-flex;
+    align-self: center;
+    margin-left: 45px;
   }
 
   .div_2 {
-    position: relative;
-    left: 52%;
+    width: 28%;
+    justify-content: space-evenly;
+    display: flex;
   }
-  button:first-child {
+  /* button:first-child {
     background-color: rgb(22, 22, 22);
     color: rgb(208, 208, 208);
     margin-right: 0;
-  }
+  } */
 
   button:last-child {
     margin-left: 0;
   }
 
   input {
-    width: 100px;
+    width: 200px;
     border-style: none;
   }
   #searchbar {
     padding: 10px;
     background-color: white;
     border-radius: 20px;
+    height: 90%;
+    align-self: center;
+    margin-left: 20px;
   }
   #searchbar img {
     justify-self: center;

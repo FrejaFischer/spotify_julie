@@ -3,15 +3,26 @@
 // const text = Astro.props.text;
 
 const { titel, text } = Astro.props;
+const { isnew } = Astro.props;
 ---
 
 <article>
+  {isnew && <p class="new">NEW!</p>}
   <img src="https://api.lorem.space/image/album?w=150&h=150&hash=8B7BCDC2" alt="" />
   <h2>{titel}</h2>
   <p>{text}</p>
 </article>
 
 <style>
+  .new {
+    background-color: red;
+    width: fit-content;
+    padding: 4px;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 6.2%;
+    margin-top: 0.6%;
+  }
   h2 {
     color: aliceblue;
     font-size: 105%;

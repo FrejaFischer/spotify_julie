@@ -1,24 +1,41 @@
 ---
 const { src } = Astro.props;
 const { hasIcon } = Astro.props;
+const { variant } = Astro.props;
 ---
 
-<button>
-  {hasIcon && <img src={src} alt="Icon" />}
+<!-- src={src} -->
+<button class={variant}>
+  <!-- {hasIcon && <svg />} -->
   <slot />
 </button>
 
 <style>
   button {
-    border-radius: 25px;
-    padding: 1% 2.2% 1% 2.2%;
     font-weight: 600;
     font-size: 90%;
-    border: none;
-    background-color: rgb(241, 241, 241);
-    color: rgb(22, 22, 22);
+    display: flex;
+    align-items: center;
+    margin-left: 14px;
     /* position: relative;
     left: 72%;
     top: 18%; */
+  }
+  .primary {
+    border: none;
+    border-radius: 25px;
+    padding: 1% 8% 1% 8%;
+    background-color: rgb(241, 241, 241);
+    color: rgb(22, 22, 22);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .secondary {
+    /* border: none;
+    border-radius: 25px;
+    padding: 1% 2.2% 1% 2.2%; */
+    color: rgb(241, 241, 241);
+    background-color: initial;
+    border: none;
   }
 </style>
